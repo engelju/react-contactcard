@@ -1,25 +1,26 @@
-import React from "react"
+import React from "react";
+import './App.css';
 
 const App = () => {
-    const msg = "This is my message to you.";
+  return (
+    <>
+      <ContactCard />
+      <ContactCard />
+      <ContactCard />
+    </>
+  );
+};
 
-    const divStyle = {
-        color: 'blue'
-    };
-
-    const handleClick = () => {
-        alert("you clicked again");
-    }
-
-    return (
-        <div className="helloworld">
-            <h1>Hello, World</h1>
-            <h2>First React App</h2>
-            <p style={divStyle}>Second React App</p>
-            <p onClick={() => alert("you clicked...")}>{msg}</p>
-            <p onClick={handleClick}>{msg}</p>
-        </div>
-    );
-}
+const ContactCard = () => {
+  return (
+    <div className="contact-card">
+      <img src="https://placekitten.com/150" alt="profile" />
+      <div className="user-details">
+        <p>Name: Julie Engel</p>
+        <p>Email: Julie.Engel@mail.com</p>
+      </div>
+    </div>
+  );
+};
 
 export default App
